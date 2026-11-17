@@ -1892,6 +1892,7 @@ LRESULT CSearchDlg::DoCommand(int id, int msg)
                 bk.Backup            = (IsDlgButtonChecked(*this, IDC_CREATEBACKUP) == BST_CHECKED);
                 bk.KeepFileDate      = (IsDlgButtonChecked(*this, IDC_KEEPFILEDATECHECK) == BST_CHECKED);
                 bk.Utf8              = (IsDlgButtonChecked(*this, IDC_UTF8) == BST_CHECKED);
+                bk.Binary            = (IsDlgButtonChecked(*this, IDC_BINARY) == BST_CHECKED);
                 bk.IncludeSystem     = (IsDlgButtonChecked(*this, IDC_INCLUDESYSTEM) == BST_CHECKED);
                 bk.IncludeFolder     = (IsDlgButtonChecked(*this, IDC_INCLUDESUBFOLDERS) == BST_CHECKED);
                 bk.IncludeSymLinks   = (IsDlgButtonChecked(*this, IDC_INCLUDESYMLINK) == BST_CHECKED);
