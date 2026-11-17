@@ -80,6 +80,7 @@ void CBookmarks::AddBookmark(const Bookmark& bm)
     SetValue(bm.Name.c_str(), L"keepfiledate", bm.KeepFileDate ? L"true" : L"false");
     SetValue(bm.Name.c_str(), L"wholewords", bm.WholeWords ? L"true" : L"false");
     SetValue(bm.Name.c_str(), L"utf8", bm.Utf8 ? L"true" : L"false");
+    SetValue(bm.Name.c_str(), L"binary", bm.Binary ? L"true" : L"false");
     SetValue(bm.Name.c_str(), L"includesystem", bm.IncludeSystem ? L"true" : L"false");
     SetValue(bm.Name.c_str(), L"includefolder", bm.IncludeFolder ? L"true" : L"false");
     SetValue(bm.Name.c_str(), L"includesymlinks", bm.IncludeSymLinks ? L"true" : L"false");
@@ -108,6 +109,7 @@ void CBookmarks::RemoveBookmark(const std::wstring& name)
     Delete(name.c_str(), L"keepfiledate", true);
     Delete(name.c_str(), L"wholewords", true);
     Delete(name.c_str(), L"utf8", true);
+    Delete(name.c_str(), L"binary", true);
     Delete(name.c_str(), L"includesystem", true);
     Delete(name.c_str(), L"includefolder", true);
     Delete(name.c_str(), L"includesymlinks", true);
@@ -134,6 +136,7 @@ Bookmark CBookmarks::GetBookmark(const std::wstring& name) const
         bk.KeepFileDate      = wcscmp(GetValue(name.c_str(), L"keepfiledate", L"false"), L"true") == 0;
         bk.WholeWords        = wcscmp(GetValue(name.c_str(), L"wholewords", L"false"), L"true") == 0;
         bk.Utf8              = wcscmp(GetValue(name.c_str(), L"utf8", L"false"), L"true") == 0;
+        bk.Binary            = wcscmp(GetValue(name.c_str(), L"binary", L"false"), L"true") == 0;
         bk.IncludeSystem     = wcscmp(GetValue(name.c_str(), L"includesystem", L"false"), L"true") == 0;
         bk.IncludeFolder     = wcscmp(GetValue(name.c_str(), L"includefolder", L"false"), L"true") == 0;
         bk.IncludeSymLinks   = wcscmp(GetValue(name.c_str(), L"includesymlinks", L"false"), L"true") == 0;
