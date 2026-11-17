@@ -80,7 +80,7 @@ public:
                 bGot = true;
                 if (it + 1 < end)
                 {
-                    if (it[1] == '\n' || (bBigEndian && *it == 0x0a00))
+                    if (it[1] == '\n' || (bBigEndian && it[1] == 0x0a00))
                     {
                         // crlf lineending
                         ++it;
