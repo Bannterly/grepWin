@@ -318,7 +318,7 @@ void CBookmarksDlg::PrepareSelected()
         m_bForceBinary       = wcscmp(m_bookmarks.GetValue(buf.get(), L"binary", L"false"), L"true") == 0;
         m_bIncludeSystem     = wcscmp(m_bookmarks.GetValue(buf.get(), L"includesystem", L"false"), L"true") == 0;
         m_bIncludeFolder     = wcscmp(m_bookmarks.GetValue(buf.get(), L"includefolder", L"false"), L"true") == 0;
-        m_bIncludeSymLinks   = wcscmp(m_bookmarks.GetValue(buf.get(), L"includesymlink", L"false"), L"true") == 0;
+        m_bIncludeSymLinks   = wcscmp(m_bookmarks.GetValue(buf.get(), L"includesymlinks", L"false"), L"true") == 0;
         m_bIncludeHidden     = wcscmp(m_bookmarks.GetValue(buf.get(), L"includehidden", L"false"), L"true") == 0;
         m_bIncludeBinary     = wcscmp(m_bookmarks.GetValue(buf.get(), L"includebinary", L"false"), L"true") == 0;
         m_bFileMatchRegex    = wcscmp(m_bookmarks.GetValue(buf.get(), L"filematchregex", L"false"), L"true") == 0;
